@@ -9,7 +9,9 @@
       "Read(/E:\\0KoreaUniversity\\capstone\\forecasting_archive\\models/**)",
       "Read(/E:\\0KoreaUniversity\\capstone\\forecasting_archive\\models/**)",
       "Read(/E:\\0KoreaUniversity\\capstone\\forecasting_archive\\models/**)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

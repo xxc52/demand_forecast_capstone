@@ -13,7 +13,7 @@
 - **베이스라인 구축**: 3가지 기본 예측 모델 성능 평가
 - **확장 가능한 프레임워크**: 고도화된 모델 추가를 위한 기반 마련
 
-## 📊 데이터셋
+## 📊 데이터셋(더미 데이터셋입니다)
 
 - **기간**: 1981년 1월 1일 ~ 1984년 12월 30일
 - **총 데이터**: 1,460개 일별 기록
@@ -42,9 +42,10 @@ print(results)  # {'wmape': 21.04, 'mape': 23.45, ...}
 - **RMSE**: Root Mean Square Error
 - **MASE**: Mean Absolute Scaled Error
 
-### 2. 베이스라인 모델 (`models/baseline_test.py`)
+### 2. 베이스라인 테스트 모듈 (`models/baseline_test.py`)
 
 3가지 기본 예측 모델을 구현하여 성능 기준점을 제공합니다.
+=> 후에 좋은 성능을 내는 모델 1가지를 골라서 기준점으로 사용할 예정입니다.
 
 ```python
 from models.baseline_test import BaselineModels
@@ -54,7 +55,7 @@ results = baseline_tester.evaluate_all_baselines(horizon=1)
 baseline_tester.plot_single_prediction_point(horizon=1)
 ```
 
-**구현된 모델**:
+**Baseline 후보 모델 3가지**:
 
 1. **전일 베이스라인** 🔴
 
@@ -70,7 +71,7 @@ baseline_tester.plot_single_prediction_point(horizon=1)
    - 1년 전 같은 날 값 사용
    - 계절성 패턴 반영, 윤년 고려
 
-## 📈 성능 결과
+## 📈 성능 결과 (예시)
 
 ### 베이스라인 모델 성능 비교 (WMAPE %)
 
@@ -82,66 +83,9 @@ baseline_tester.plot_single_prediction_point(horizon=1)
 
 > 🏆 **결론**: 전일 베이스라인이 두 예측 시나리오 모두에서 최고 성능 달성
 
-## 🎨 시각화 기능
-
-### 집중형 예측 시각화
-
-- **최근 1주일 컨텍스트**: 예측 배경 정보 제공
-- **실제 값 vs 예측 값**: 명확한 비교를 위한 점 표시
-- **참조점 표시**: 각 모델이 사용하는 기준 값 표시
-- **작년 데이터 주석**: 별도 텍스트 박스로 표시
-
-### 성능 비교 차트
-
-- **막대 그래프**: 모델 간 성능 직관적 비교
-- **수치 표시**: 정확한 성능 지표 확인
-- **다중 시나리오**: t+1, t+1,t+2 병렬 비교
-
-## 🚀 사용 방법
-
-### 1. 빠른 시작
-
-```bash
-# 베이스라인 테스트 실행
-python main_test.py
-```
-
-### 2. Jupyter Notebook 사용
-
-```python
-# main_test.ipynb에서 셀 단위로 실행
-# 대화형 분석 및 시각화 가능
-```
-
-### 3. 개별 모듈 활용
-
-```python
-# 성능 평가만 사용
-from performance import TimeSeriesEvaluator
-
-evaluator = TimeSeriesEvaluator()
-results = evaluator.evaluate(actual, predicted, metrics=['wmape', 'mae'])
-```
-
-## 📁 프로젝트 구조
-
-```
-forecasting_archive/
-├── 📄 README.md              # 프로젝트 설명서 (이 파일)
-├── 📄 CLAUDE.md              # 개발 컨텍스트 및 기술 문서
-├── 📄 performance.py         # 성능 평가 모듈
-├── 📄 main_test.py           # 테스트 스크립트
-├── 📄 main_test.ipynb        # Jupyter 노트북
-├── 📂 data/
-│   └── 📄 for_test.csv       # 테스트 데이터셋
-└── 📂 models/
-    ├── 📄 baseline.py        # 기존 베이스라인
-    └── 📄 baseline_test.py   # 베이스라인 모델 구현
-```
-
 ## 🔧 요구사항
 
-```python
+```
 pandas >= 1.3.0
 numpy >= 1.21.0
 matplotlib >= 3.4.0
@@ -150,5 +94,6 @@ matplotlib >= 3.4.0
 ---
 
 <div align="center">
-
+<img src='data/korea.jpg' width=60px>
+<div>고려대학교 일반대학원 MSBA 6기</div>
 </div>
