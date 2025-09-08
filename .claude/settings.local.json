@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(/E:\\0KoreaUniversity\\capstone\\forecasting_archive/**)",
+      "Read(/E:\\0KoreaUniversity\\capstone\\forecasting_archive/**)",
+      "Read(/E:\\0KoreaUniversity\\capstone\\forecasting_archive/**)",
+      "Bash(python:*)",
+      "Read(/E:\\0KoreaUniversity\\capstone\\forecasting_archive\\data/**)",
+      "Read(/E:\\0KoreaUniversity\\capstone\\forecasting_archive\\models/**)",
+      "Read(/E:\\0KoreaUniversity\\capstone\\forecasting_archive\\models/**)",
+      "Read(/E:\\0KoreaUniversity\\capstone\\forecasting_archive\\models/**)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
