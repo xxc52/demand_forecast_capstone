@@ -11,7 +11,8 @@
       "Read(/E:\\0KoreaUniversity\\capstone\\forecasting_archive\\models/**)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "mcp__ide__executeCode"
     ],
     "deny": [],
     "ask": []
